@@ -1,4 +1,5 @@
-﻿using System.IO;
+﻿using System.Collections.Generic;
+using System.IO;
 
 namespace I3s.Tile
 {
@@ -15,6 +16,17 @@ namespace I3s.Tile
             {
                 i3s.VertexCount = (int)reader.ReadUInt32();
                 i3s.FeatureCount = (int)reader.ReadUInt32();
+
+                var positions = new List<Position>();
+                for(var i = 0; i < i3s.VertexCount; i++)
+                {
+                    float x = reader.ReadSingle();
+                    float y = reader.ReadSingle();
+                    float z = reader.ReadSingle();
+                    var p = new Position() { X = x, Y = y,Z=z};
+                    positions.Add(p);
+                }
+                i3s.Positions = positions;
 
                 // todo: read rest of items
 

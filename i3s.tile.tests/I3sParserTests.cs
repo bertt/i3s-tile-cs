@@ -13,18 +13,16 @@ namespace Tests
         {
             stream = File.OpenRead("testfixtures/0.bin");
             Assert.IsTrue(stream != null);
-
         }
 
         [Test]
         public void ParseFirstTest()
         {
-            // todo: fix next test
             var i3s = I3sParser.ParseI3s(stream);
             Assert.IsTrue(i3s!=null);
             Assert.IsTrue(i3s.VertexCount == 67173);
             Assert.IsTrue(i3s.FeatureCount == 473);
-
+            Assert.IsTrue(i3s.Positions.Count == i3s.VertexCount);
         }
     }
 }

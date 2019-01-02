@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28407.52
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "i3s.tile", "i3s.tile\i3s.tile.csproj", "{7A10DEFA-276F-43E1-807D-593F4C9A50C8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "i3s.tile.tests", "i3s.tile.tests\i3s.tile.tests.csproj", "{BA13EBAB-BFB5-4A5E-89D1-24EEB5C472C3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "doc", "doc", "{48DAB35B-CEB3-4D7F-9D7E-2FA4BC08303D}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7A10DEFA-276F-43E1-807D-593F4C9A50C8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7A10DEFA-276F-43E1-807D-593F4C9A50C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7A10DEFA-276F-43E1-807D-593F4C9A50C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7A10DEFA-276F-43E1-807D-593F4C9A50C8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BA13EBAB-BFB5-4A5E-89D1-24EEB5C472C3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA13EBAB-BFB5-4A5E-89D1-24EEB5C472C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA13EBAB-BFB5-4A5E-89D1-24EEB5C472C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA13EBAB-BFB5-4A5E-89D1-24EEB5C472C3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4963466F-4ECC-4B7A-9AEF-A9AB76AE95BD}
+	EndGlobalSection
+EndGlobal

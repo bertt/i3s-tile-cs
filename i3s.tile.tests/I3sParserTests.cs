@@ -27,8 +27,8 @@ namespace Tests
             Assert.IsTrue(i3s.Normals.Count == i3s.VertexCount);
             Assert.IsTrue(i3s.Uv0s.Count == i3s.VertexCount);
             Assert.IsTrue(i3s.Colors.Count == i3s.VertexCount);
-
-
+            Assert.IsTrue(i3s.FeatureIds.Count == i3s.FeatureCount);
+            Assert.IsTrue(i3s.FaceRanges.Count == i3s.FeatureCount);
         }
     }
 }

@@ -13,5 +13,7 @@ namespace I3s.Tile
         public List<Vector3> Normals { get; set; }
         public List<Vector2> Uv0s { get; set; }
         public List<Color> Colors { get; set; }
+        public List<long> FeatureIds { get; set; }
+        public List<int[]> FaceRanges { get; set; }
     }
 }

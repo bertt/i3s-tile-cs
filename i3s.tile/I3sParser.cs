@@ -11,20 +11,18 @@ namespace I3s.Tile
             var i3s = new I3s();
 
             // assume defaultGeometrySchema as a start...
-
-            // read header
             using (var reader = new BinaryReader(stream))
             {
                 i3s.VertexCount = (int)reader.ReadUInt32();
                 i3s.FeatureCount = (int)reader.ReadUInt32();
 
                 var positions = new List<Position>();
-                for(var i = 0; i < i3s.VertexCount; i++)
+                for (var i = 0; i < i3s.VertexCount; i++)
                 {
                     float x = reader.ReadSingle();
                     float y = reader.ReadSingle();
                     float z = reader.ReadSingle();
-                    var p = new Position() { X = x, Y = y,Z=z};
+                    var p = new Position() { X = x, Y = y, Z = z };
                     positions.Add(p);
                 }
 
@@ -47,7 +45,7 @@ namespace I3s.Tile
                 {
                     float x = reader.ReadSingle();
                     float y = reader.ReadSingle();
-                    var p = new Vector2() { X = x, Y = y};
+                    var p = new Vector2() { X = x, Y = y };
                     uv0s.Add(p);
                 }
 
@@ -68,11 +66,26 @@ namespace I3s.Tile
 
                 i3s.Colors = colors;
 
-                // todo:  feature attributes
-                //uint64 id[featureCount];
-                //uint32 faceRange[2 * featureCount];
+                var ids = new List<long>();
+                for (var i = 0; i < i3s.FeatureCount; i++)
+                {
+                    var id = (long)reader.ReadUInt64();
+                    ids.Add(id);
+                }
+                i3s.FeatureIds = ids;
+
+                var faceRanges = new List<int[]>();
+                for (var i = 0; i < i3s.FeatureCount; i++)
+                {
+                    var from = (int)reader.ReadUInt32();
+                    var to = (int)reader.ReadUInt32();
+                    var faceRange = new int[] {from, to };
+                    faceRanges.Add(faceRange);
+                }
+                i3s.FaceRanges = faceRanges;
+
+                return i3s;
             }
-            return i3s;
         }
     }
 }

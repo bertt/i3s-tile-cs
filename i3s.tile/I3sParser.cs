@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Drawing;
 using System.IO;
+using System.Numerics;
 
 namespace I3s.Tile
 {
@@ -16,13 +17,13 @@ namespace I3s.Tile
                 i3s.VertexCount = (int)reader.ReadUInt32();
                 i3s.FeatureCount = (int)reader.ReadUInt32();
 
-                var positions = new List<Position>();
+                var positions = new List<Vector3>();
                 for (var i = 0; i < i3s.VertexCount; i++)
                 {
                     float x = reader.ReadSingle();
                     float y = reader.ReadSingle();
                     float z = reader.ReadSingle();
-                    var p = new Position() { X = x, Y = y, Z = z };
+                    var p = new Vector3() { X = x, Y = y, Z = z };
                     positions.Add(p);
                 }
 

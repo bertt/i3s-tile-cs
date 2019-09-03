@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Drawing;
+using System.Numerics;
 
 namespace I3s.Tile
 {
@@ -9,7 +10,7 @@ namespace I3s.Tile
         public int FeatureCount { get; set; }
         public string Ordering { get; set; }
 
-        public List<Position> FeatureVertices { get; set; }
+        public List<Vector3> FeatureVertices { get; set; }
         public List<Vector3> Normals { get; set; }
         public List<Vector2> Uv0s { get; set; }
         public List<Color> Colors { get; set; }

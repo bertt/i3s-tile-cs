@@ -23,4 +23,13 @@ Run
 
 ```
 $ i3s sanfrico.bin
+i3s file: sanfrico.bin
+Vertices: 66207
+Feaatures: 302
+FeatureVertices: 66207
+Normals: 66207
+Uv0s: 66207
+Colors: 66207
+FeatureIds: 302
+FaceRanges: 302
 ```

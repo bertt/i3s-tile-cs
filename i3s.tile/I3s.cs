@@ -8,7 +8,8 @@ namespace I3s.Tile
     {
         public int VertexCount { get; set; }
         public int FeatureCount { get; set; }
-        public string Ordering { get; set; }
+
+        // whats this doing? public string Ordering { get; set; }
 
         public List<Vector3> FeatureVertices { get; set; }
         public List<Vector3> Normals { get; set; }

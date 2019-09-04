@@ -3,6 +3,14 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <RootNamespace>I3s.Tile</RootNamespace>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Version>0.1</Version>
+    <Authors>Bert Temme</Authors>
+    <Company>Bert Temme</Company>
+    <Description>Library for parsing/writing i3s binary files</Description>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageProjectUrl>https://github.com/bertt/i3s-tile-cs</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/bertt/i3s-tile-cs</RepositoryUrl>
   </PropertyGroup>
 
   <ItemGroup>
